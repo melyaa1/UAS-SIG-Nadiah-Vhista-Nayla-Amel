@@ -1,0 +1,461 @@
+/* ===========================
+   GOOGLE FONT
+=========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#edf4fb;
+}
+
+/* ===========================
+    LAYOUT
+=========================== */
+
+.container{
+    display:flex;
+    min-height:100vh;
+}
+
+/* ===========================
+    SIDEBAR
+=========================== */
+
+.sidebar{
+
+    width:260px;
+    background:#0c4da2;
+    color:white;
+    padding:25px;
+
+    display:flex;
+    flex-direction:column;
+
+}
+
+.logo{
+
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    margin-bottom:40px;
+
+}
+
+.logo i{
+
+    font-size:34px;
+
+}
+
+.logo h2{
+
+    font-size:25px;
+
+}
+
+.menu{
+
+    list-style:none;
+
+}
+
+.menu li{
+
+    margin-bottom:12px;
+
+}
+
+.menu li a{
+
+    color:white;
+    text-decoration:none;
+
+    display:flex;
+    align-items:center;
+
+    gap:15px;
+
+    padding:14px 18px;
+
+    border-radius:10px;
+
+    transition:.3s;
+
+}
+
+.menu li a:hover{
+
+    background:rgba(255,255,255,.15);
+
+}
+
+.menu li.active a{
+
+    background:white;
+    color:#0c4da2;
+    font-weight:600;
+
+}
+
+/* ===========================
+    CONTENT
+=========================== */
+
+.content{
+
+    flex:1;
+    padding:35px;
+
+}
+
+/* ===========================
+    HEADER
+=========================== */
+
+header{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    margin-bottom:30px;
+
+}
+
+header h1{
+
+    color:#0c4da2;
+    margin-bottom:6px;
+
+}
+
+header p{
+
+    color:#666;
+
+}
+
+.search{
+
+    display:flex;
+    background:white;
+    border-radius:12px;
+
+    overflow:hidden;
+
+    box-shadow:0 3px 10px rgba(0,0,0,.08);
+
+}
+
+.search input{
+
+    border:none;
+    padding:12px 18px;
+
+    width:280px;
+
+    outline:none;
+
+}
+
+.search button{
+
+    background:#0c4da2;
+    color:white;
+
+    border:none;
+
+    width:55px;
+
+    cursor:pointer;
+
+}
+
+/* ===========================
+    CARD
+=========================== */
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:20px;
+
+    margin-bottom:30px;
+
+}
+
+.card{
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:25px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+.card i{
+
+    font-size:38px;
+
+    color:#0c4da2;
+
+}
+
+.card h2{
+
+    font-size:32px;
+
+    color:#0c4da2;
+
+}
+
+.card p{
+
+    color:#666;
+
+}
+
+/* ===========================
+    MAP
+=========================== */
+
+.map-box{
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:20px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+.map-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:20px;
+
+}
+
+.map-header h2{
+
+    color:#0c4da2;
+
+}
+
+.button-group{
+
+    display:flex;
+
+    gap:10px;
+
+}
+
+.button-group button{
+
+    background:#0c4da2;
+
+    color:white;
+
+    border:none;
+
+    padding:10px 20px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.button-group button:hover{
+
+    background:#083a79;
+
+}
+
+#map{
+
+    width:100%;
+
+    height:500px;
+
+    border-radius:15px;
+
+}
+
+/* ===========================
+    LEGEND
+=========================== */
+
+.legend{
+
+    margin-top:25px;
+
+    background:white;
+
+    padding:20px;
+
+    border-radius:18px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+.legend h3{
+
+    margin-bottom:15px;
+
+    color:#0c4da2;
+
+}
+
+.item{
+
+    display:flex;
+
+    align-items:center;
+
+    margin-bottom:12px;
+
+    color:#444;
+
+}
+
+.item span{
+
+    width:18px;
+
+    height:18px;
+
+    border-radius:50%;
+
+    display:inline-block;
+
+    margin-right:12px;
+
+}
+
+.red{
+
+    background:red;
+
+}
+
+.blue{
+
+    background:#0066ff;
+
+}
+
+.green{
+
+    background:green;
+
+}
+
+/* ===========================
+    FOOTER
+=========================== */
+
+footer{
+
+    margin-top:30px;
+
+    text-align:center;
+
+    color:#777;
+
+    font-size:14px;
+
+}
+
+/* ===========================
+    RESPONSIVE
+=========================== */
+
+@media(max-width:1100px){
+
+.cards{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+header{
+
+flex-direction:column;
+align-items:flex-start;
+gap:20px;
+
+}
+
+.search{
+
+width:100%;
+
+}
+
+.search input{
+
+width:100%;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.container{
+
+flex-direction:column;
+
+}
+
+.sidebar{
+
+width:100%;
+
+}
+
+.cards{
+
+grid-template-columns:1fr;
+
+}
+
+#map{
+
+height:350px;
+
+}
+
+}
