@@ -1,22 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebGIS Fasilitas Kesehatan Jakarta Barat</title>
+    
+    <!-- Link CSS Lokal -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Font Awesome untuk Ikon Menu dan Card -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
 
-  <!DOCTYPE html>
-  <html lang="en">
-    <head>
-      
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>WebGIS Dashboard UI Design</title>
-      <meta name="description" content="Explore healthcare facilities in West Jakarta with an interactive GIS dashboard, featuring detailed statistics and filters for informed decision-making." />
-      <meta name="robots" content="noindex, nofollow" />
-      <style>html, body { height: 100%; margin: 0; } #root { height: 100%; }</style>
-      
-    </head>
+    <div class="container">
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="fa-solid fa-map-location-dot"></i>
+                <h2>WebGIS</h2>
+            </div>
+            <ul class="menu">
+                <li class="active">
+                    <a href="#"><i class="fa-solid fa-chart-pie"></i> Dashboard</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa-solid fa-hospital"></i> Data Faskes</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa-solid fa-filter"></i> Filter</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa-solid fa-chart-line"></i> Statistik</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa-solid fa-circle-info"></i> Tentang</a>
+                </li>
+            </ul>
+        </aside>
 
-    <body>
-      
-      <div id="root"></div>
-      <script type="module" src="/src/main.tsx"></script>
-      
-    </body>
-  </html>
-  
+        <!-- MAIN CONTENT -->
+        <main class="content">
+            <!-- HEADER -->
+            <header>
+                <div>
+                    <h1>Dashboard</h1>
+                    <p>Selamat datang di WebGIS Fasilitas Kesehatan Jakarta Barat</p>
+                </div>
+                <div class="search">
+                    <input type="text" placeholder="Cari fasilitas kesehatan...">
+                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+            </header>
+
+            <!-- STATISTIC CARDS -->
+            <section class="cards">
+                <div class="card">
+                    <i class="fa-solid fa-hospital-user"></i>
+                    <div>
+                        <h2>197</h2>
+                        <p>Total Fasilitas</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-hospital"></i>
+                    <div>
+                        <h2>23</h2>
+                        <p>Rumah Sakit</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-house-medical"></i>
+                    <div>
+                        <h2>130</h2>
+                        <p>Klinik</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-pills"></i>
+                    <div>
+                        <h2>44</h2>
+                        <p>Apotek</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- MAP SECTION -->
+            <section class="map-box">
+                <div class="map-header">
+                    <h2>Peta Persebaran Faskes</h2>
+                    <div class="button-group">
+                        <button id="btn-all">Semua</button>
+                        <button id="btn-rs">Rumah Sakit</button>
+                    </div>
+                </div>
+                <!-- Kontainer Peta Leaflet -->
+                <div id="map"></div>
+            </section>
+
+            <!-- LEGEND SECTION -->
+            <section class="legend">
+                <h3>Legenda Peta</h3>
+                <div class="item">
+                    <span class="red"></span> Rumah Sakit
+                </div>
+                <div class="item">
+                    <span class="blue"></span> Klinik
+                </div>
+                <div class="item">
+                    <span class="green"></span> Apotek
+                </div>
+            </section>
+
+            <!-- FOOTER -->
+            <footer>
+                <p>&copy; 2026 WebGIS Fasilitas Kesehatan Jakarta Barat</p>
+            </footer>
+        </main>
+    </div>
+
+    <!-- Leaflet Javascript -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <!-- Javascript Aplikasi Utama -->
+    <script src="js/script.js"></script>
+</body>
+</html>
